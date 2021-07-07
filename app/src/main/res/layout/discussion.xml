@@ -17,6 +17,7 @@
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/joincard"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -176,5 +177,18 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/recentdiscuss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Discussion"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

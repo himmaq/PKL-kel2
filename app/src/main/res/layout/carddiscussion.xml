@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recentcard"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="YOUR THEME GOES HERE"/>
+
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_theme"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Your question goes here"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/tv_question"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/toddlers"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_question"
+            android:layout_toRightOf="@id/img_profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Name"/>
+
+        <TextView
+            android:id="@+id/tv_posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_question"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="11dp"
+            android:text="posted Month/YY"/>
+
+        <TextView
+            android:id="@+id/tv_detailquestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_profile"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+            android:text="Your detail question goes here"
+            android:maxLines="3"/>
+
+        <ImageView
+            android:id="@+id/img_love"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/tv_detailquestion"
+            android:src="@drawable/love"/>
+
+        <TextView
+            android:id="@+id/tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detailquestion"
+            android:layout_toRightOf="@id/img_love"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="13dp"
+            android:text="2 likes"/>
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_detailquestion"
+            android:layout_toRightOf="@id/tv_like"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/comment"/>
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_detailquestion"
+            android:layout_toRightOf="@id/img_comment"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="13dp"
+            android:text="5 replies"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profileuser"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/img_love"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/toddlers"/>
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_love"
+            android:layout_toRightOf="@id/img_profileuser"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:hint="Write a reply"/>
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
