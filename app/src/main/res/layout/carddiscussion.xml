@@ -111,12 +111,20 @@
             android:layout_marginLeft="5dp"
             android:textSize="13dp"
             android:text="5 replies"/>
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/img_love"
+            android:background="@color/black"
+            android:layout_margin="10dp"/>
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_profileuser"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_below="@id/img_love"
+            android:layout_below="@id/line"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="20dp"
             android:src="@drawable/toddlers"/>
@@ -126,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/img_love"
-            android:layout_toRightOf="@id/img_profileuser"
+            android:layout_toRightOf="@id/line"
             android:layout_marginTop="6dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
