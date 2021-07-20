@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_foreground"/>
+    <item
+        android:id="@+id/discussion"
+        android:title="Discussion"
+        android:icon="@drawable/ic_discussion_foreground"/>
+    <item
+        android:id="@+id/daycare"
+        android:title="DayCare"
+        android:icon="@drawable/ic_daycare_foreground"/>
+    <item
+        android:id="@+id/growth"
+        android:title="Growth"
+        android:icon="@drawable/ic_growth_foreground"/>
+    <item
+        android:id="@+id/account"
+        android:title="Account"
+        android:icon="@drawable/ic_person_foreground"/>
+</menu>
