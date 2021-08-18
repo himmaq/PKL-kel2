@@ -43,6 +43,7 @@ public class DiscussionFragment extends Fragment {
         // Set title bar
         ((HomeActivity) getActivity())
                 .setActionBarTitle("Discussion");
+
     }
 
 }
