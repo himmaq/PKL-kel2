@@ -1,9 +1,12 @@
 package com.example.discussion;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -11,6 +14,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
+
+import static android.graphics.Color.WHITE;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
@@ -56,8 +61,19 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         }
         return loadFragment(fragment);
     }
-    public void setActionBarTitle(String title) {
+
+    public void setActionBar(String title) {
+        //set title
         getSupportActionBar().setTitle(title);
+        //using custom toolbar
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.custom_toolbar);
+        //draw toolbar background
+        ColorDrawable color = new ColorDrawable(WHITE);
+        getSupportActionBar().setBackgroundDrawable(color);
+        //back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
 }
