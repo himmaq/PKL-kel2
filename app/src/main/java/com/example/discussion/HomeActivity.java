@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // kita set default nya Home Fragment
+        // set Home Fragment default
         loadFragment(new HomeFragment());
         // inisialisasi BottomNavigaionView
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -52,9 +52,9 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.discussion:
                 fragment = new DiscussionFragment();
                 break;
-//            case R.id.favorite_menu:
-//                fragment = new FavoriteFragment();
-//                break;
+            case R.id.growth:
+                fragment = new GrowthFragment();
+                break;
 //            case R.id.account_menu:
 //                fragment = new AccountFragment();
 //                break;
@@ -75,5 +75,4 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
     }
-
 }

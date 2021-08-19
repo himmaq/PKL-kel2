@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".WeightFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_add_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="@string/add_data"
+        android:textColor="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_weight_data"
+        android:layout_below="@id/btn_add_data"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:outlineAmbientShadowColor="@color/orange"
+        android:background="@color/grey">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_count_months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/count_months"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/tv_months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_count_months"
+                android:text="months"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_count_months"
+                android:text="@string/date"
+                android:textSize="12dp"/>
+            <TextView
+                android:id="@+id/tv_count_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/tv_months"
+                android:layout_marginLeft="220dp"
+                android:text="@string/count_kg"
+                android:textColor="@color/black"
+                android:textSize="17dp"/>
+            <TextView
+                android:id="@+id/tv_kg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/tv_count_weight"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/kg"/>
+            <ImageView
+                android:id="@+id/iv_right_arrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/tv_kg"
+                android:src="@drawable/ic_right_arrow_fix_foreground"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+</ScrollView>

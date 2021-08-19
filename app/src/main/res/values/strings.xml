@@ -4,4 +4,21 @@
     <string name="home_fragment">Home fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu">Menu</string>
+    <string name="health_record">Health Record</string>
+    <string name="immunization">Immunization</string>
+    <string name="graphs">Graphs</string>
+    <string name="measurement">Measurement</string>
+    <string name="child_name">David</string>
+    <string name="add_data">+ Add Data</string>
+    <string name="count_months">24</string>
+    <string name="date">15 Agustus 2021</string>
+    <string name="count_kg">16,5</string>
+    <string name="kg">kg</string>
+    <string name="cm">cm</string>
+    <string name="children_s_ages">Children\'s Ages</string>
+    <string name="weight">Weight</string>
+    <string name="date_now">Date Now</string>
+    <string name="_24">24</string>
+    <string name="add_data_add">Add Data</string>
 </resources>
