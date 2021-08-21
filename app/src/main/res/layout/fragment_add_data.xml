@@ -51,8 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_ages"
-            android:inputType="number"
-            android:Hint="Months"/>
+            android:inputType="number" />
         <TextView
             android:id="@+id/tv_weight"
             android:layout_below="@id/tv_ages"
@@ -66,8 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_weight"
             android:text="@string/_24"
-            android:inputType="number"
-            android:Hint="KG"/>
+            android:inputType="number" />
         <TextView
             android:id="@+id/tv_date"
             android:layout_below="@id/tv_weight"
@@ -82,7 +80,6 @@
             android:layout_below="@id/tv_date"
             android:layout_marginBottom="100dp"
             android:inputType="date"/>
-
         <Button
             android:id="@+id/btn_add_data"
             android:layout_width="match_parent"

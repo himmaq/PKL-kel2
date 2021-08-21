@@ -55,6 +55,7 @@
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/tv_months"
                     android:layout_marginLeft="220dp"
+                    android:layout_marginTop="4dp"
                     android:text="@string/count_kg"
                     android:textColor="@color/black"
                     android:textSize="17dp"/>
@@ -63,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_toRightOf="@id/tv_count_weight"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:gravity="center"
                     android:text="@string/cm"/>

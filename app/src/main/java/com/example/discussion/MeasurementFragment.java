@@ -20,8 +20,8 @@ public class MeasurementFragment extends Fragment {
 
     // When requested, this adapter returns a DemoObjectFragment,
     // representing an object in the collection.
-    MeasurementPagerAdapter measurementPagerAdapter;
-    ViewPager viewPager;
+//    MeasurementPagerAdapter measurementPagerAdapter;
+//    ViewPager viewPager;
 
     @Nullable
     @Override
@@ -31,11 +31,11 @@ public class MeasurementFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_measurement, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        measurementPagerAdapter = new MeasurementPagerAdapter(getChildFragmentManager());
-        viewPager = view.findViewById(R.id.pager);
-        viewPager.setAdapter(measurementPagerAdapter);
-    }
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        measurementPagerAdapter = new MeasurementPagerAdapter(getChildFragmentManager());
+//        viewPager = view.findViewById(R.id.pager);
+//        viewPager.setAdapter(measurementPagerAdapter);
+//    }
 }
 

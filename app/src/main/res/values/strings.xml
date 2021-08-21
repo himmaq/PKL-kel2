@@ -21,4 +21,15 @@
     <string name="date_now">Date Now</string>
     <string name="_24">24</string>
     <string name="add_data_add">Add Data</string>
+    <string name="that_s_all_for_now">That\'s all for now!</string>
+    <string name="parenting">Parenting</string>
+    <string name="tough_topics">Tough Topics</string>
+    <string name="preschool">Preschool</string>
+    <string name="toodlers">Toodlers</string>
+    <string name="behavior">Behavior</string>
+    <string name="education">Education</string>
+    <string name="pregnancy">Pregnancy</string>
+    <string name="infants">Infants</string>
+    <string name="height">Height</string>
+    <string name="head">Head</string>
 </resources>
