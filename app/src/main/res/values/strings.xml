@@ -32,4 +32,13 @@
     <string name="infants">Infants</string>
     <string name="height">Height</string>
     <string name="head">Head</string>
+    <string name="gender">Gender</string>
+    <string name="boy">Boy</string>
+    <string name="girl">Girl</string>
+    <string name="birthday">Birthday</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="premature">Premature</string>
+    <string name="add_profile_photo">Add Profile Photo</string>
+    <string name="save">Save</string>
 </resources>
