@@ -15,11 +15,11 @@ public class SelectChildFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_discussion, container, false);
+        View view = inflater.inflate(R.layout.fragment_select_child, container, false);
 
         btnAddChild = view.findViewById(R.id.btn_add_child);
         btnAddChild.setOnClickListener(view1-> {
-            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MenuDiscussionFragment()).commit();
+            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new AddChildFragment()).commit();
         });
        return view;
     }

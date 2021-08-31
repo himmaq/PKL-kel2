@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cv_comment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/toddlers"/>
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cv_comment"
+                android:layout_marginLeft="5dp"
+                android:textSize="13sp"
+                android:text="Name"/>
+            <TextView
+                android:id="@+id/tv_user_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_comment"
+                android:layout_toRightOf="@id/cv_comment"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"
+                android:text="content comment"/>
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

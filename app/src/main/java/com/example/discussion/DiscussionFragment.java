@@ -4,19 +4,55 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
-import android.widget.Toolbar;
+
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+
 
 public class DiscussionFragment extends Fragment {
+
     ImageView ivInfants, ivPregnancy, ivEducation, ivBehaviour, ivToddlers, ivPreschool, ivParenting, ivTough;
+
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    private String mParam1;
+    private String mParam2;
+
+    RecyclerView recview;
+
+    DiscussionAdapter adapter;
+
+    public DiscussionFragment(){
+
+    }
+
+    public static DiscussionFragment newInstance(String param1, String param2){
+        DiscussionFragment fragment = new DiscussionFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        if(getArguments() != null){
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -31,6 +67,9 @@ public class DiscussionFragment extends Fragment {
         ivParenting = view.findViewById(R.id.parenting_img);
         ivTough = view.findViewById(R.id.tough_img);
 
+        recview = view.findViewById(R.id.rv_recent_discussion);
+        recview.setLayoutManager(new LinearLayoutManager(getContext()));
+
         ivInfants.setOnClickListener(view1-> {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MenuDiscussionFragment()).commit();
         });
@@ -38,6 +77,7 @@ public class DiscussionFragment extends Fragment {
         ivPregnancy.setOnClickListener(view1-> {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MenuDiscussionFragment()).commit();
         });
+
         ivEducation.setOnClickListener(view1-> {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MenuDiscussionFragment()).commit();
         });
@@ -59,19 +99,38 @@ public class DiscussionFragment extends Fragment {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MenuDiscussionFragment()).commit();
         });
 
+        FirebaseRecyclerOptions<Model> options =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("User"), Model.class)
+                        .build();
+
+        adapter = new DiscussionAdapter(options);
+        recview.setAdapter(adapter);
 
         return view;
     }
 
-    public void onResume(){
-        super.onResume();
+//    public void onResume(){
+//        super.onResume();
+//
+//        // Set title bar
+//        ((HomeActivity) getActivity())
+//                .setActionBar("Discussion");
+//    }
 
-        // Set title bar
-        ((HomeActivity) getActivity())
-                .setActionBar("Discussion");
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapter.startListening();
     }
 
-//    buat back button tp blum bisa
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
+
+    //    buat back button tp blum bisa
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
 //        switch(item.getItemId()) {

@@ -6,16 +6,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="15dp"
+    android:padding="16dp"
     tools:context="DiscussionFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_growth"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+            <ImageButton
+                android:id="@+id/btn_back_disc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_arrow_back_foreground"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/discussion"/>
+        </androidx.appcompat.widget.Toolbar>
+
         <LinearLayout
             android:id="@+id/linear1"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -206,7 +227,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/linear1"
-            android:text="Recent Discussion"
+            android:text="@string/recent_discussion"
+            android:layout_marginTop="20dp"
             android:textColor="@color/black"
             android:textSize="15sp"/>
 

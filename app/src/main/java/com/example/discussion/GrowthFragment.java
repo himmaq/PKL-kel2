@@ -12,30 +12,35 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class GrowthFragment extends Fragment {
-    CardView cv_measurement, cv_graphs;
+    CardView cvMeasurement, cvGraphs,cvHealth;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_growth, container, false);
 
-        cv_measurement = view.findViewById(R.id.cv_measurement);
-        cv_graphs = view.findViewById(R.id.cv_graph);
+        cvMeasurement = view.findViewById(R.id.cv_measurement);
+        cvGraphs = view.findViewById(R.id.cv_graph);
+        cvHealth = view.findViewById(R.id.cv_health);
 
-        cv_measurement.setOnClickListener(view1-> {
+        cvMeasurement.setOnClickListener(view1-> {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MeasurementFragment()).commit();
         });
 
-        cv_graphs.setOnClickListener(view1-> {
+        cvGraphs.setOnClickListener(view1-> {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new GraphsFragment()).commit();
+        });
+
+        cvHealth.setOnClickListener(view1-> {
+            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new SelectChildFragment()).commit();
         });
 
         return view;
     }
-    public void onResume(){
-        super.onResume();
-        // Set title bar
-        ((HomeActivity) getActivity())
-                .setActionBar("Growth");
-    }
+//    public void onResume(){
+//        super.onResume();
+//        // Set title bar
+//        ((HomeActivity) getActivity())
+//                .setActionBar("Growth");
+//    }
 }

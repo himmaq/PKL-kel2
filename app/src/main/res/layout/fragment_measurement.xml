@@ -11,55 +11,93 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_mea"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+            <ImageButton
+                android:id="@+id/btn_back_mea"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_arrow_back_foreground"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/growth"/>
+        </androidx.appcompat.widget.Toolbar>
         <TextView
             android:id="@+id/tv_measurement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_mea"
             android:text="@string/measurement"
             android:textStyle="bold"
             android:textSize="15sp"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_measurement_menu"
             android:layout_toRightOf="@id/tv_measurement"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardElevation="0dp"
-            android:layout_marginLeft="190dp">
+            android:layout_below="@id/toolbar_mea"
+            card_view:cardElevation="0dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="end"
                 android:orientation="horizontal">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/boy"
-                    android:layout_gravity="end"/>
-
+                    android:src="@drawable/boy"/>
                 <TextView
                     android:id="@+id/tv_child_name"
                     android:layout_width="36dp"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:text="@string/child_name"
                     android:textStyle="bold" />
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:src="@drawable/ic_bottom_arrow_foreground"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/pager"
-            android:layout_below="@id/cv_measurement_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp">
+
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </androidx.viewpager.widget.ViewPager>
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_measurement"
+                android:layout_marginTop="20dp">
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/weight"/>
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/height"/>
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/head"/>
+            </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_below="@id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"/>
         <FrameLayout
             android:id="@+id/fl_tab"
             android:layout_width="match_parent"

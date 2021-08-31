@@ -3,72 +3,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     tools:context=".GraphsFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_graph"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+            <ImageButton
+                android:id="@+id/btn_back_graph"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_arrow_back_foreground"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/growth"/>
+        </androidx.appcompat.widget.Toolbar>
+
         <TextView
             android:id="@+id/tv_graph_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_graph"
             android:text="@string/graphs"
             android:textSize="15sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
-        <TextView
-            android:id="@+id/tv_all_children"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_graph"
             android:layout_toRightOf="@id/tv_graph_title"
-            android:layout_marginLeft="220dp"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:text="All Children's"
-            android:textColor="@color/black"/>
-        <ImageButton
-            android:id="@+id/ib_drop_down"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_toRightOf="@id/tv_all_children"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_bottom_arrow_foreground"/>
+            android:gravity="end"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_all_children"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="All Children's"
+                android:textColor="@color/black"/>
+            <ImageButton
+                android:id="@+id/ib_drop_down"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_bottom_arrow_foreground"/>
+        </LinearLayout>
 
-        <android.support.design.widget.TabLayout
+        <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_graph_title"
-            app:tabTextColor="@color/orange"
-            app:tabMode="fixed"
-            app:tabSelectedTextColor="#FFFFFF">
-
-            <android.support.design.widget.TabItem
+            android:layout_marginTop="20dp">
+            <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_weight"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/weight"/>
-
-            <android.support.design.widget.TabItem
+            <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_height"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/height"/>
-            <android.support.design.widget.TabItem
+            <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_head"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/head"/>
-
-        </android.support.design.widget.TabLayout>
-
-        <android.support.v4.view.ViewPager
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager"
+            android:layout_below="@id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tab_layout">
-
-        </android.support.v4.view.ViewPager>
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"/>
     </RelativeLayout>
 </ScrollView>

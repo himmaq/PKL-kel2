@@ -2,14 +2,39 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
-    <RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".AddChildFragment">
+
+<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_add_child"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+            <ImageButton
+                android:id="@+id/btn_back_child"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_arrow_back_foreground"
+                android:background="@color/white"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="@string/growth"/>
+        </androidx.appcompat.widget.Toolbar>
+
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_add_child"
             android:text="Add Children's Data"
             android:textColor="@color/black"
             android:textStyle="bold"/>
@@ -25,7 +50,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_name"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:inputType="text"/>
         <TextView
@@ -61,7 +85,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_birthday"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:inputType="date"/>
         <TextView
@@ -95,7 +118,6 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_weight"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:inputType="number"/>
         <EditText
@@ -105,7 +127,6 @@
             android:layout_below="@id/tv_childrens_weight"
             android:layout_toRightOf="@id/tv_childrens_kg"
             android:layout_marginLeft="95dp"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:inputType="number"/>
         <EditText
@@ -116,7 +137,6 @@
             android:layout_toRightOf="@id/tv_childrens_cmhead"
             android:layout_marginLeft="103dp"
             android:gravity="end"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:inputType="number"/>
         <TextView
@@ -152,7 +172,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_photo"
-            android:textStyle="bold"
             android:textColor="@color/black"
             android:inputType="text"/>
         <Button
@@ -163,7 +182,6 @@
             android:text="@string/save"
             android:textColor="@color/white"
             android:textAllCaps="false"/>
-
 
     </RelativeLayout>
 

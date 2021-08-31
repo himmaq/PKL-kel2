@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MenuDiscussionFragment">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_menu_discussion"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/carddiscussion"/>
-</LinearLayout>
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_add_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ Add Question"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu_discussion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_add_question"
+            android:layout_marginTop="20dp"
+            tools:listitem="@layout/carddiscussion"/>
+    </LinearLayout>
+</FrameLayout>

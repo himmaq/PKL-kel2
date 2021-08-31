@@ -19,11 +19,10 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    public void onResume(){
-        super.onResume();
-        // Set title bar
-        ((HomeActivity) getActivity())
-                .setActionBar("Home");
-    }
-
+//    public void onResume(){
+//        super.onResume();
+//        // Set title bar
+//        ((HomeActivity) getActivity())
+//                .setActionBar("Home");
+//    }
 }
