@@ -58,7 +58,6 @@ public class DiscussionAdapter extends FirebaseRecyclerAdapter<Model, Discussion
             detailQuestion = itemView.findViewById(R.id.tv_detailquestion);
             like = itemView.findViewById(R.id.tv_like);
             reply = itemView.findViewById(R.id.et_replies);
-
         }
     }
 }

@@ -10,13 +10,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
-            android:id="@+id/btn_add_question"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_mea"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+ Add Question"
-            android:textColor="@color/white"
-            android:textAllCaps="false"/>
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white">
+            <ImageButton
+                android:id="@+id/btn_back_child"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                android:background="@color/white"/>
+            <TextView
+                android:id="@+id/tv_topic"
+                style="@style/Title"
+                android:text="Topic"/>
+        </androidx.appcompat.widget.Toolbar>
+        <Button
+            style="@style/Button"
+            android:id="@+id/btn_add_question"
+            android:text="+ Add Question"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_menu_discussion"

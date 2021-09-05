@@ -9,26 +9,25 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_growth"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white">
+
             <ImageButton
-                android:id="@+id/btn_back_growth"
+                android:id="@+id/btn_back_child"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_arrow_back_foreground"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:src="@drawable/ic_back" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"
+                style="@style/Title"
                 android:text="@string/growth"/>
         </androidx.appcompat.widget.Toolbar>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

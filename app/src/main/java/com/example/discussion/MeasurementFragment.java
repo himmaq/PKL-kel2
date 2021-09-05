@@ -35,18 +35,31 @@ public class MeasurementFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_measurement, container, false);
 
-        tvChildName = v.findViewById(R.id.tv_child_name);
-        tvChildName.setOnClickListener(view1-> {
-            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new SelectChildFragment()).commit();
-        });
-//        cvMeasurementMenu = v.findViewById(R.id.cv_measurement_menu);
-//        cvMeasurementMenu.setOnClickListener(view1-> {
+//        tvChildName = v.findViewById(R.id.tv_child_name);
+//        tvChildName.setOnClickListener(view1-> {
 //            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new SelectChildFragment()).commit();
 //        });
-
+        cvMeasurementMenu = v.findViewById(R.id.cv_measurement_menu);
+        cvMeasurementMenu.setOnClickListener(view1-> {
+            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new SelectChildFragment()).commit();
+        });
 
         return v;
     }
+
+    @Override
+    public void onActivityCreated(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        ((HomeActivity) getActivity()).setTab();
+    }
+    //    @Override
+//    public void onStart() {
+//        super.onStart();
+//    }
+//
+//    public void onResume(){
+//        super.onResume();
+//        }
 
 //    @Override
 //    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

@@ -6,6 +6,7 @@
     android:padding="16dp"
     android:orientation="vertical">
 
+
     <EditText
         android:id="@+id/et_question"
         android:layout_width="match_parent"

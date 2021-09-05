@@ -18,15 +18,10 @@
                 android:id="@+id/btn_back_child"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_arrow_back_foreground"
+                android:src="@drawable/ic_back"
                 android:background="@color/white"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"
+                style="@style/Title"
                 android:text="@string/growth"/>
         </androidx.appcompat.widget.Toolbar>
 
@@ -39,25 +34,21 @@
             android:textColor="@color/black"
             android:textStyle="bold"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/tv_title"
-            android:layout_marginTop="20dp"
             android:text="Children's Name"/>
         <EditText
             android:id="@+id/rt_childrens_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_name"
-            android:textColor="@color/black"
+            android:textColor="@color/purple_200"
             android:inputType="text"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/rt_childrens_name"
-            android:layout_marginTop="20dp"
             android:text="@string/gender"/>
         <RadioButton
             android:id="@+id/rb_childrens_boy"
@@ -74,11 +65,9 @@
             android:layout_marginLeft="100dp"
             android:text="@string/girl"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_birthday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/rb_childrens_boy"
-            android:layout_marginTop="20dp"
             android:text="@string/birthday"/>
         <EditText
             android:id="@+id/et_childrens_birthday"
@@ -88,29 +77,23 @@
             android:textColor="@color/black"
             android:inputType="date"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/et_childrens_birthday"
-            android:layout_marginTop="20dp"
             android:text="@string/weight"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/et_childrens_birthday"
             android:layout_toRightOf="@id/tv_childrens_weight"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="100dp"
             android:gravity="center"
             android:text="@string/head"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/et_childrens_birthday"
             android:layout_toRightOf="@id/tv_childrens_head"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="120dp"
             android:text="@string/height"/>
         <EditText
@@ -140,11 +123,9 @@
             android:textColor="@color/black"
             android:inputType="number"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_premature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_kg"
-            android:layout_marginTop="20dp"
             android:text="@string/premature"/>
         <RadioButton
             android:id="@+id/rb_childrens_no"
@@ -161,11 +142,9 @@
             android:layout_marginLeft="100dp"
             android:text="@string/yes"/>
         <TextView
+            style="@style/TitleInput"
             android:id="@+id/tv_childrens_photo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@id/rb_childrens_no"
-            android:layout_marginTop="20dp"
             android:text="@string/add_profile_photo"/>
         <EditText
             android:id="@+id/et_childrens_photo"
@@ -175,13 +154,10 @@
             android:textColor="@color/black"
             android:inputType="text"/>
         <Button
+            style="@style/Button"
             android:id="@+id/bnt_save"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@id/et_childrens_photo"
-            android:text="@string/save"
-            android:textColor="@color/white"
-            android:textAllCaps="false"/>
+            android:text="@string/save"/>
 
     </RelativeLayout>
 

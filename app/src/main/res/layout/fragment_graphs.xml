@@ -14,18 +14,13 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white">
             <ImageButton
-                android:id="@+id/btn_back_graph"
+                android:id="@+id/btn_back_child"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_arrow_back_foreground"
+                android:src="@drawable/ic_back"
                 android:background="@color/white"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"
+                style="@style/Title"
                 android:text="@string/growth"/>
         </androidx.appcompat.widget.Toolbar>
 
@@ -58,36 +53,42 @@
                 android:layout_width="10dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ic_bottom_arrow_foreground"/>
+                android:src="@drawable/ic_buttom"
+                android:background="@color/white"/>
         </LinearLayout>
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
+            android:id="@+id/tab_layout_graph"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_graph_title"
             android:layout_marginTop="20dp">
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab_weight"
+                android:id="@+id/tab_weight_graph"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/weight"/>
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab_height"
+                android:id="@+id/tab_height_graph"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/height"/>
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab_head"
+                android:id="@+id/tab_head_graph"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/head"/>
         </com.google.android.material.tabs.TabLayout>
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/pager"
-            android:layout_below="@id/tab_layout"
+            android:id="@+id/pager_graph"
+            android:layout_below="@id/tab_layout_graph"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"/>
+        <FrameLayout
+            android:id="@+id/fl_graph_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pager_graph"/>
     </RelativeLayout>
 </ScrollView>

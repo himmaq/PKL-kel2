@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +23,7 @@ import com.google.firebase.database.Query;
 public class DiscussionFragment extends Fragment {
 
     ImageView ivInfants, ivPregnancy, ivEducation, ivBehaviour, ivToddlers, ivPreschool, ivParenting, ivTough;
+    TextView tvTopic;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -67,11 +69,15 @@ public class DiscussionFragment extends Fragment {
         ivParenting = view.findViewById(R.id.parenting_img);
         ivTough = view.findViewById(R.id.tough_img);
 
+        tvTopic = view.findViewById(R.id.tv_topic);
+
+        //
         recview = view.findViewById(R.id.rv_recent_discussion);
         recview.setLayoutManager(new LinearLayoutManager(getContext()));
 
         ivInfants.setOnClickListener(view1-> {
-            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new MenuDiscussionFragment()).commit();
+            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new AddDataFragment()).commit();
+//            tvTopic.setText("Infants");
         });
 
         ivPregnancy.setOnClickListener(view1-> {

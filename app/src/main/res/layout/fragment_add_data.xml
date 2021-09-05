@@ -37,7 +37,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_bottom_arrow_foreground"/>
+                    android:src="@drawable/ic_buttom"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <TextView
@@ -52,6 +52,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_ages"
+            android:text="Months"
+            android:textColor="@color/grey"
+            android:gravity="end"
             android:inputType="number" />
         <TextView
             android:id="@+id/tv_weight"
@@ -82,13 +85,10 @@
             android:layout_marginBottom="100dp"
             android:inputType="date"/>
         <Button
+            style="@style/Button"
             android:id="@+id/btn_add_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@id/et_date"
             android:layout_margin="30dp"
-            android:textAllCaps="false"
-            android:text="@string/add_data_add"
-            android:textColor="@color/white"/>
+            android:text="@string/add_data_add"/>
     </RelativeLayout>
 </ScrollView>

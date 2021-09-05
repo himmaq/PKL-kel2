@@ -6,13 +6,13 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -66,6 +66,38 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         }
         return loadFragment(fragment);
     }
+
+    public void setTab(){
+//        Toolbar toolbar = findViewById(R.id.toolbar_mea);
+//        setSupportActionBar(toolbar);
+        final TabLayout tabLayout = findViewById(R.id.tab_layout);
+        final ViewPager viewPager = findViewById(R.id.pager);
+
+        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
+        viewPager.setAdapter(pagerAdapter);
+
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                //Dipanggil ketika tab memasuki state/keadaan yang dipilih.
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                //Dipanggil saat tab keluar dari keadaan yang dipilih.
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+                //Dipanggil ketika tab yang sudah dipilih, dipilih lagi oleh user.
+            }
+        });    }
+
+//    private void setSupportActionBar(Toolbar toolbar) {
+//    }
 
 //    public void setActionBar(String title) {
 //        //set title

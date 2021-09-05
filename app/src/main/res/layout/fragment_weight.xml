@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     tools:context=".WeightFragment">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <Button
-        android:id="@+id/btn_add_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="@string/add_data"
-        android:textColor="@color/white"/>
+<!--    <Button-->
+<!--        android:id="@+id/btn_add_data"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:text="@string/add_data"-->
+<!--        android:textColor="@color/white"/>-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_weight_data"
-        android:layout_below="@id/btn_add_data"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,10 +75,12 @@
                     android:text="@string/kg"/>
                 <ImageView
                     android:id="@+id/iv_right_arrow"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:layout_toRightOf="@id/tv_kg"
-                    android:src="@drawable/ic_right_arrow_fix_foreground"/>
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_right"/>
                 </LinearLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>

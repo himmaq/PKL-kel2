@@ -33,8 +33,6 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="12sp"
                 android:text="content comment"/>
-
-
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

@@ -53,7 +53,7 @@ dependencies {
 
     //firebase dependency
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
-    implementation 'com.google.firebase:firebase-database:20.0.1'
+    implementation 'com.google.firebase:firebase-database'
     implementation 'com.firebaseui:firebase-ui-database:6.3.0'
 //    implementation 'com.android.support:design:27.0.2'
 

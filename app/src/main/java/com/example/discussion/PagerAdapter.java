@@ -24,11 +24,14 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new GraphWeightFragment();
+                return new WeightFragment();
+//                        GraphWeightFragment();
             case 1:
-                return new GraphHeightFragment();
+                return new HeightFragment();
+//                        GraphHeightFragment();
             case 2:
-                return new GraphHeadFragment();
+                return new HeadFragment();
+//                        GraphHeadFragment();
             default:
                 return null;
         }

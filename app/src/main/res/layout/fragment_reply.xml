@@ -16,18 +16,13 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/white">
                 <ImageButton
-                    android:id="@+id/btn_back_comment"
+                    android:id="@+id/btn_back_child"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_arrow_back_foreground"
+                    android:src="@drawable/ic_back"
                     android:background="@color/white"/>
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
+                    style="@style/Title"
                     android:text="@string/comment"/>
             </androidx.appcompat.widget.Toolbar>
 

@@ -17,18 +17,13 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white">
             <ImageButton
-                android:id="@+id/btn_back_mea"
+                android:id="@+id/btn_back_child"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_arrow_back_foreground"
+                android:src="@drawable/ic_back"
                 android:background="@color/white"/>
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"
+                style="@style/Title"
                 android:text="@string/growth"/>
         </androidx.appcompat.widget.Toolbar>
         <TextView
@@ -66,7 +61,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ic_bottom_arrow_foreground"/>
+                    android:src="@drawable/ic_buttom"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -98,9 +93,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"/>
+        <Button
+            style="@style/Button"
+            android:id="@+id/btn_add_data"
+            android:layout_below="@id/pager"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_data"/>
         <FrameLayout
             android:id="@+id/fl_tab"
             android:layout_width="match_parent"
-            android:layout_height="0dp"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_add_data"/>
     </RelativeLayout>
 </ScrollView>
