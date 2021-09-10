@@ -13,6 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -26,7 +27,8 @@ public class MeasurementFragment extends Fragment {
 //    ViewPager viewPager;
 
     private CardView cvMeasurementMenu;
-    private TextView tvChildName;
+    private Button btnAddData;
+
 
     @Nullable
     @Override
@@ -35,10 +37,9 @@ public class MeasurementFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_measurement, container, false);
 
-//        tvChildName = v.findViewById(R.id.tv_child_name);
-//        tvChildName.setOnClickListener(view1-> {
-//            getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new SelectChildFragment()).commit();
-//        });
+        btnAddData = v.findViewById(R.id.btn_add_data);
+
+
         cvMeasurementMenu = v.findViewById(R.id.cv_measurement_menu);
         cvMeasurementMenu.setOnClickListener(view1-> {
             getFragmentManager().beginTransaction().replace(R.id.fl_fragment, new SelectChildFragment()).commit();

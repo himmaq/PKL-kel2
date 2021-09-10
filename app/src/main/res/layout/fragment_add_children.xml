@@ -34,7 +34,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_name"
             android:layout_below="@id/tv_title"
             android:text="Children's Name"/>
@@ -43,10 +43,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_name"
-            android:textColor="@color/purple_200"
+            android:textColor="@color/black"
             android:inputType="text"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_gender"
             android:layout_below="@id/rt_childrens_name"
             android:text="@string/gender"/>
@@ -65,24 +65,31 @@
             android:layout_marginLeft="100dp"
             android:text="@string/girl"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_birthday"
             android:layout_below="@id/rb_childrens_boy"
             android:text="@string/birthday"/>
         <EditText
             android:id="@+id/et_childrens_birthday"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_birthday"
             android:textColor="@color/black"
             android:inputType="date"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar"
+            android:layout_below="@id/tv_childrens_birthday"
+            android:layout_toRightOf="@id/et_childrens_birthday"
+            android:layout_marginTop="15dp"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_weight"
             android:layout_below="@id/et_childrens_birthday"
             android:text="@string/weight"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_head"
             android:layout_below="@id/et_childrens_birthday"
             android:layout_toRightOf="@id/tv_childrens_weight"
@@ -90,7 +97,7 @@
             android:gravity="center"
             android:text="@string/head"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_height"
             android:layout_below="@id/et_childrens_birthday"
             android:layout_toRightOf="@id/tv_childrens_head"
@@ -103,6 +110,16 @@
             android:layout_below="@id/tv_childrens_weight"
             android:textColor="@color/black"
             android:inputType="number"/>
+        <TextView
+            android:id="@+id/tv_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_below="@id/tv_childrens_weight"
+            android:layout_toRightOf="@id/tv_childrens_kg"
+            android:textSize="16sp"
+            android:text="@string/kg"/>
+
         <EditText
             android:id="@+id/tv_childrens_cmhead"
             android:layout_width="50dp"
@@ -112,6 +129,15 @@
             android:layout_marginLeft="95dp"
             android:textColor="@color/black"
             android:inputType="number"/>
+        <TextView
+            android:id="@+id/tv_cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_below="@id/tv_childrens_head"
+            android:layout_toRightOf="@id/tv_childrens_cmhead"
+            android:textSize="16sp"
+            android:text="@string/cm"/>
         <EditText
             android:id="@+id/tv_childrens_cmheiht"
             android:layout_width="50dp"
@@ -123,7 +149,16 @@
             android:textColor="@color/black"
             android:inputType="number"/>
         <TextView
-            style="@style/TitleInput"
+            android:id="@+id/tv_cmheight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:layout_below="@id/tv_childrens_height"
+            android:layout_toRightOf="@id/tv_childrens_cmheiht"
+            android:textSize="16sp"
+            android:text="@string/cm"/>
+        <TextView
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_premature"
             android:layout_below="@id/tv_childrens_kg"
             android:text="@string/premature"/>
@@ -142,23 +177,28 @@
             android:layout_marginLeft="100dp"
             android:text="@string/yes"/>
         <TextView
-            style="@style/TitleInput"
+            style="@style/Text.TitleInput"
             android:id="@+id/tv_childrens_photo"
             android:layout_below="@id/rb_childrens_no"
             android:text="@string/add_profile_photo"/>
         <EditText
             android:id="@+id/et_childrens_photo"
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_childrens_photo"
             android:textColor="@color/black"
             android:inputType="text"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera"
+            android:layout_below="@id/tv_childrens_photo"
+            android:layout_toRightOf="@id/et_childrens_photo"
+            android:layout_marginTop="15dp"/>
         <Button
             style="@style/Button"
             android:id="@+id/bnt_save"
             android:layout_below="@id/et_childrens_photo"
             android:text="@string/save"/>
-
-    </RelativeLayout>
-
+        </RelativeLayout>
 </ScrollView>

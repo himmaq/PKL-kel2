@@ -23,7 +23,7 @@ import org.jetbrains.annotations.NotNull;
 import static android.graphics.Color.WHITE;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
-
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         // set Home Fragment default
         loadFragment(new HomeFragment());
         // inisialisasi BottomNavigaionView
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
         // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
@@ -41,6 +41,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fl_fragment, fragment)
+//                    .addToBackStack(null)
                     .commit();
             return true;
         }
@@ -65,6 +66,17 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 //                break;
         }
         return loadFragment(fragment);
+    }
+    // exit from app in HomeFragment when press back button
+    @Override
+    public void onBackPressed() {
+        if(bottomNavigationView.getSelectedItemId()==R.id.home){
+            super.onBackPressed();
+            finish();
+        }
+        else{
+            bottomNavigationView.setSelectedItemId(R.id.home);
+        }
     }
 
     public void setTab(){

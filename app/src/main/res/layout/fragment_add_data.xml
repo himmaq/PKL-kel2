@@ -46,30 +46,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/children_s_ages"/>
-        <EditText
-            android:id="@+id/et_ages"
+            android:text="Children's Ages"/>
+        <FrameLayout
+            android:id="@+id/fl_et_ages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_ages"
-            android:text="Months"
-            android:textColor="@color/grey"
-            android:gravity="end"
-            android:inputType="number" />
+            android:layout_below="@id/tv_ages">
+            <EditText
+                android:id="@+id/et_ages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Months"
+                android:textColor="@color/grey"
+                android:gravity="end"
+                android:inputType="number" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Months"
+                android:layout_marginTop="25dp"
+                android:gravity="end"/>
+        </FrameLayout>
         <TextView
             android:id="@+id/tv_weight"
-            android:layout_below="@id/et_ages"
+            android:layout_below="@id/fl_et_ages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/weight"/>
         <EditText
             android:id="@+id/et_weight"
-            android:layout_width="match_parent"
+            android:layout_width="364dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_weight"
             android:text="@string/_24"
-            android:inputType="number" />
+            android:inputType="number"/>
+        <TextView
+            style="@style/Text.TitleInput"
+            android:text="@string/kg"
+            android:layout_below="@id/tv_weight"
+            android:layout_toRightOf="@id/et_weight"
+            android:layout_marginTop="31dp"/>
         <TextView
             android:id="@+id/tv_date"
             android:layout_below="@id/et_weight"
@@ -79,11 +96,18 @@
             android:text="@string/date_now"/>
         <EditText
             android:id="@+id/et_date"
-            android:layout_width="match_parent"
+            android:layout_width="357dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_date"
             android:layout_marginBottom="100dp"
             android:inputType="date"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar"
+            android:layout_below="@id/tv_date"
+            android:layout_toRightOf="@id/et_date"
+            android:layout_marginTop="15dp"/>
         <Button
             style="@style/Button"
             android:id="@+id/btn_add_data"
